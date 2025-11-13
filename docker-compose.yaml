@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  frontend:
+    build: ./frontend
+    container_name: registration-frontend
+    ports:
+      - "3000:3000"
+    environment:
+      - BACKEND_URL=http://backend:5000
+    networks:
+      - fullstack-network
+    depends_on:
+      - backend
+
+  backend:
+    build: ./backend
+    container_name: registration-backend
+    ports:
+      - "5000:5000"
+    networks:
+      - fullstack-network
+
+networks:
+  fullstack-network:
+    driver: bridge
