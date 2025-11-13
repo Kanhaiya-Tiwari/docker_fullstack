@@ -1,80 +1,112 @@
-User Registration System       
-                    
-                
-                Create Account
-                Join our community today
-            
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="particles" class="particles"></div>
 
-            
-                
-                    Full Name
-                    
-                    👤
-                
+    <main class="container">
+        <section class="form-container">
+            <div class="form-header">
+                <div class="logo-circle" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4Z"/>
+                        <path d="M6.88 18.63a5.98 5.98 0 0 1 10.24 0"/>
+                    </svg>
+                </div>
+                <h1>Create Account</h1>
+                <p>Join our community and unlock premium experiences.</p>
+            </div>
 
-                
-                    Email Address
-                    
-                    📧
-                
+            <form id="registrationForm" novalidate>
+                <div class="form-group">
+                    <label for="fullname">Full Name</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="John Doe" autocomplete="name" required>
+                    <span class="input-icon" aria-hidden="true">👤</span>
+                </div>
 
-                
-                    Phone Number
-                    
-                    📱
-                
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="john.doe@example.com" autocomplete="email" required>
+                    <span class="input-icon" aria-hidden="true">📧</span>
+                </div>
 
-                
-                    Age
-                    
-                    🎂
-                
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+1 555 123 4567" autocomplete="tel" required>
+                    <span class="input-icon" aria-hidden="true">📱</span>
+                </div>
 
-                
-                    Gender
-                    
-                        Select Gender
-                        Male
-                        Female
-                        Other
-                    
-                    ⚧
-                
+                <div class="form-group">
+                    <label for="age">Age</label>
+                    <input type="number" id="age" name="age" placeholder="25" min="18" max="100" required>
+                    <span class="input-icon" aria-hidden="true">🎂</span>
+                </div>
 
-                
-                    Country
-                    
-                    🌍
-                
+                <div class="form-group">
+                    <label for="gender">Gender</label>
+                    <select id="gender" name="gender" required>
+                        <option value="">Select Gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                        <option value="Prefer not to say">Prefer not to say</option>
+                    </select>
+                    <span class="input-icon" aria-hidden="true">⚧</span>
+                </div>
 
-                
-                    Register Now
-                    →
-                
-            
+                <div class="form-group">
+                    <label for="country">Country</label>
+                    <input type="text" id="country" name="country" placeholder="United States" autocomplete="country-name" required>
+                    <span class="input-icon" aria-hidden="true">🌍</span>
+                </div>
 
-            
-        
+                <button type="submit" class="submit-btn">
+                    <span class="btn-text">Register Now</span>
+                    <span class="btn-icon" aria-hidden="true">→</span>
+                </button>
 
-        
-            Welcome! 🎉
-            
-                ⚡
-                
-                    Lightning Fast
-                    Instant registration process
-                
-            
-            
-                🔒
-                
-                    Secure & Safe
-                    Your data is protected
-                
-            
-            
-                🌟
-                
-                    Premium Experience
-                    Best-in-class service
-                
+                <div id="message" class="message" role="alert" aria-live="polite"></div>
+            </form>
+        </section>
+
+        <aside class="info-panel">
+            <h2>Welcome! 🎉</h2>
+            <div class="feature">
+                <div class="feature-icon" aria-hidden="true">⚡</div>
+                <div class="feature-text">
+                    <h3>Lightning Fast</h3>
+                    <p>Instant API-backed registration with real-time validation.</p>
+                </div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon" aria-hidden="true">🔒</div>
+                <div class="feature-text">
+                    <h3>Secure & Safe</h3>
+                    <p>Backend validation ensures data integrity across services.</p>
+                </div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon" aria-hidden="true">🌟</div>
+                <div class="feature-text">
+                    <h3>Premium Experience</h3>
+                    <p>Responsive design and animated UI crafted for delight.</p>
+                </div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon" aria-hidden="true">🤝</div>
+                <div class="feature-text">
+                    <h3>Seamless Integration</h3>
+                    <p>Dockerized microservices ready for rapid deployment.</p>
+                </div>
+            </div>
+        </aside>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
